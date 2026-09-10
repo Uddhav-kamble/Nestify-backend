@@ -24,7 +24,9 @@ app.get("/", (req, res) => {
 })
 
 app.get("/test", async (req, res) => {
-    res.json({ message: "Server is running" })
+    res.json({ 
+        message: "UPDATE: test was successful!", 
+    })
 })
 
 app.use("/api/auth", authRouter )
@@ -36,5 +38,5 @@ await connectDb()
 
 app.listen(port,()=>{
     
-    console.log("server started")
+    console.log("server started on port",port)
 })
