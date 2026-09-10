@@ -42,7 +42,7 @@ export const login = async (req,res) => {
         }
         let token = await genToken(user._id)
         res.cookie("token",token,{
-            // httpOnly:true,
+            httpOnly:true,
             // secure:process.env.NODE_ENVIRONMENT = "production",
             // sameSite: "strict",
             secure:true,
