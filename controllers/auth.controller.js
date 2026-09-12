@@ -13,7 +13,7 @@ export const sighUp=async (req,res) => {
         let user = await User.create({name , email , password:hashPassword})
         let token = await genToken(user._id)
         res.cookie("token",token,{
-            // httpOnly:true,
+            httpOnly:true,
             // secure:process.env.NODE_ENVIRONMENT = "production",
             // sameSite: "strict",
             secure:true,

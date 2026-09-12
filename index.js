@@ -15,7 +15,8 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    // origin:"http://localhost:5173",
+    origin:"ec2-13-60-63-20.eu-north-1.compute.amazonaws.com",
     credentials:true
 }))
 
